@@ -1,0 +1,24 @@
+{
+	"name": "TR_Scheduletrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_dynamichttp",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 2,
+				"startTime": "2023-05-26T07:24:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

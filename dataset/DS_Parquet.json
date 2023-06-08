@@ -1,0 +1,30 @@
+{
+	"name": "DS_Parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLSTESTCONNECTION",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().Filename",
+					"type": "Expression"
+				},
+				"folderPath": "inputdata",
+				"fileSystem": "refined"
+			},
+			"compressionCodec": "none"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
